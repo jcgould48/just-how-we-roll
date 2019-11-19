@@ -26,9 +26,10 @@ function getRandomNumber(max) {
  * YOUR CODE BELOW *
  *******************/
 document.querySelector('#d6-roll').src= "images/start/d6.png"
- function rollSix(){
+function rollSix(){
     let rollSixResult = getRandomNumber(6);
-    document.querySelector('#d6.img').src = `images/start/d${rollSixResult}.png`
+    document.querySelector('#d6-roll').src = `images/d6/${rollSixResult}.png`
+    sixes.push(rollSixResult)
 }
 
 /*******************
