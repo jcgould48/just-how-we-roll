@@ -25,12 +25,19 @@ function getRandomNumber(max) {
 /*******************
  * YOUR CODE BELOW *
  *******************/
-
+document.querySelector('#d6-roll').src= "images/start/d6.png"
+ function rollSix(){
+    let rollSixResult = getRandomNumber(6);
+    document.querySelector('#d6.img').src = `images/start/d${rollSixResult}.png`
+}
 
 /*******************
  * EVENT LISTENERS *
  *******************/
-
+document.querySelector("#d6-button").addEventListener("click", rollSix);
+// document.querySelector("#double-d6").addEventListener("click", rollDouble);
+// document.querySelector("#d12").addEventListener("click", rollTwelve);
+// document.querySelector("#d20").addEventListener("click", rollTwenty);
 
 /****************
  * MATH SECTION *
