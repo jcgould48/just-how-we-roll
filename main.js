@@ -69,13 +69,15 @@ document.querySelector('#double-d6-roll-1').src= "images/start/d6.png"
 document.querySelector('#double-d6-roll-2').src= "images/start/d6.png"
 
  function rollDouble(){
-    let rollResult = getRandomNumber(6);
-    document.querySelector('#d6-roll').src = `images/d6/${rollResult}.png`
-    sixes.push(rollResult)
-    console.log(sixes)
-    document.querySelector('#d6-rolls-mean').innerText = mean(sixes);
-    document.querySelector('#d6-rolls-median').innerText = median(sixes)
-    document.querySelector('#d6-rolls-mode').innerText = mode(sixes)
+    let rollResult1= getRandomNumber(6);
+    let rollResult2= getRandomNumber(6);
+    document.querySelector('#double-d6-roll-1').src = `images/d6/${rollResult1}.png`
+    document.querySelector('#double-d6-roll-2').src = `images/d6/${rollResult2}.png`
+    doubleSixes.push(rollResult1, rollResult2)
+    console.log(doubleSixes)
+    document.querySelector('#double-d6-rolls-mean').innerText = mean(doubleSixes);
+    document.querySelector('#double-d6-rolls-median').innerText = median(doubleSixes)
+    document.querySelector('#double-d6-rolls-mode').innerText = mode(doubleSixes)
 }
 
 document.querySelector('#d12-roll').src= "images/start/d12.jpeg"
