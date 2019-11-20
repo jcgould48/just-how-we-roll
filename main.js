@@ -78,11 +78,11 @@ document.querySelector('#double-d6-roll-2').src= "images/start/d6.png"
     document.querySelector('#d6-rolls-mode').innerText = mode(sixes)
 }
 
-document.querySelector('#d12-roll').src= "images/start/d12.png"
+document.querySelector('#d12-roll').src= "images/start/d12.jpeg"
 
  function rollTwelve(){
     let rollResult = getRandomNumber(12);
-    document.querySelector('#d12-roll').src = `images/d12/${rollResult}.png`
+    document.querySelector('#d12-roll').src = `images/numbers/${rollResult}.png`
     twelves.push(rollResult)
     console.log(twelves)
     document.querySelector('#d12-rolls-mean').innerText = mean(twelves);
@@ -90,11 +90,11 @@ document.querySelector('#d12-roll').src= "images/start/d12.png"
     document.querySelector('#d12-rolls-mode').innerText = mode(twelves)
 }
 
-document.querySelector('#d20-roll').src= "images/start/d20.png"
+document.querySelector('#d20-roll').src= "images/start/d20.jpg"
 
  function rollTwenty(){
     let rollResult = getRandomNumber(20);
-    document.querySelector('#d20-roll').src = `images/d20/${rollResult}.png`
+    document.querySelector('#d20-roll').src = `images/numbers/${rollResult}.png`
     twenties.push(rollResult)
     console.log(twenties)
     document.querySelector('#d20-rolls-mean').innerText = mean(twenties);
