@@ -25,12 +25,43 @@ function getRandomNumber(max) {
 /*******************
  * YOUR CODE BELOW *
  *******************/
-document.querySelector('#d6-roll').src= "images/start/d6.png"
-function rollSix(){
+
+function mean(arr){
+    let total = 0;
+    for (let i = 0; i < arr.length; i += 1) {
+        total += arr[i];
+    }
+    return total / arr.length;
+}
+
+function median(arr) {
+    let median = 0;
+    let numLength = arr.length;
+    arr.sort();
+    if (numLength % 2 === 0){
+        median = (arr[numLength / 2 - 1] + arr[numLength / 2]) / 2;
+    } else { 
+        median = arr[(numLength - 1) / 2];
+    }
+ 
+    return median;
+}
+
+
+
+
+ document.querySelector('#d6-roll').src= "images/start/d6.png"
+ document.querySelector('d6-rolls-mean').innerText = 'high';
+ function rollSix(){
     let rollSixResult = getRandomNumber(6);
     document.querySelector('#d6-roll').src = `images/d6/${rollSixResult}.png`
     sixes.push(rollSixResult)
+    console.log(sixes)
+    return document.querySelector('d6-rolls-mean').innerText = mean(sixes);
+    document.querySelector('d6-rolls-median').innerText = median(sixes)
 }
+
+
 
 /*******************
  * EVENT LISTENERS *
