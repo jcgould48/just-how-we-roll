@@ -51,14 +51,14 @@ function median(arr) {
 
 
  document.querySelector('#d6-roll').src= "images/start/d6.png"
- document.querySelector('d6-rolls-mean').innerText = 'high';
+
  function rollSix(){
     let rollSixResult = getRandomNumber(6);
     document.querySelector('#d6-roll').src = `images/d6/${rollSixResult}.png`
     sixes.push(rollSixResult)
     console.log(sixes)
-    return document.querySelector('d6-rolls-mean').innerText = mean(sixes);
-    document.querySelector('d6-rolls-median').innerText = median(sixes)
+    document.querySelector('#d6-rolls-mean').innerText = mean(sixes);
+    document.querySelector('#d6-rolls-median').innerText = median(sixes)
 }
 
 
