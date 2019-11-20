@@ -153,11 +153,18 @@ document.querySelector('#double-d6-roll-2').src= "images/start/d6.png"
 document.querySelector('#d12-roll').src= "images/start/d12.jpeg"
 document.querySelector('#d20-roll').src= "images/start/d20.jpg"
 
-document.querySelectorAll('.avgs').innerText = '';
-
 sixes.length = 0;
 doubleSixes.length = 0;
 twelves.length= 0;
 twenties.length = 0;
+
+resetText();
+  }
+
+  function resetText(){
+   let textSelect= document.querySelectorAll('.avgs')
+   for(let i=0; i<textSelect.length;i++){
+       textSelect[i].innerText = ''
+   }
   }
   
