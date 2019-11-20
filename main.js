@@ -31,7 +31,7 @@ function mean(arr){
     for (let i = 0; i < arr.length; i += 1) {
         total += arr[i];
     }
-    return total / arr.length;
+    return (total / arr.length).toFixed(2);
 }
 
 function median(arr) {
